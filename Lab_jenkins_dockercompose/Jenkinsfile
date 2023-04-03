@@ -5,7 +5,7 @@ pipeline {
             stage('Initialize Stage') {
                 steps {
                     echo 'Initial : Delete containers and images'
-                     dir('Week10_lab/Lab_jenkins_dockercompose') {
+                     dir('Week10_lab/Lab_jenkins_dockercompose/') {
                         echo "Current path is  ${pwd()}"
                         sh 'docker-compose down --rmi all --volumes || true'
                      }
@@ -14,7 +14,7 @@ pipeline {
 
             stage('Build Stage'){
                 steps {
-                    dir('Week10_lab/Lab_jenkins_dockercompose') {
+                    dir('Week10_lab/Lab_jenkins_dockercompose/') {
                         echo "Current path is ${pwd()}"
                         sh "docker-compose build"
                     }
@@ -23,7 +23,7 @@ pipeline {
 
             stage('Push To Docker'){
                 steps {
-                    dir('Week10_lab/Lab_jenkins_dockercompose') {
+                    dir('Week10_lab/Lab_jenkins_dockercompose/') {
                         withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                             sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
                         }
