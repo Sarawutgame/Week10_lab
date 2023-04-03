@@ -3,11 +3,11 @@ version: '3'
 services:
   backend:
     build:
-      context: ./Back_End
+      context: ./Back_end
       dockerfile: Dockerfile
     image: 63070165/my_backend_image:1.0
   frontend:
     build:
-      context: ./Front_End
+      context: ./Front_end
       dockerfile: Dockerfile
     image: 63070165/my_frontend_image:1.0
