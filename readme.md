@@ -1,3 +1,13 @@
+# ศราวุธ อุนารัตน์ 63070165
+### วิดีโอสำหรับส่งงาน
+https://drive.google.com/file/d/11P6pmYXfMjHHXmRNHu_8qoHQpq60mpzM/view?usp=share_link
+
+### ไฟล์ master
+ไฟล์ Jenkins อยู่ใน Lab_jenkins_dockercompose
+
+### ไฟล์ slave
+ไฟล์ Jenkins อยู่ใน Lab_jenkins_dockercompose
+
 # Install jenkins, docker, docker-compose, and git 
 
 ### 1. Open the install_git_docker_docker_compose.sh file :
